@@ -27,14 +27,26 @@ For hvert bilde skal dere lage en binær maske (hvit = verktøy, svart = bakgrun
     Visualiser: vis originalbildet og den predikerte masken.
 
 
+# Introduksjon til nevrale nettverk Oppgave - Samling 1
 
+## 1. Samle datasett
+ Gruppen har tatt bilde av vektøy som vi fant på verkstedet på skolen.
 
-Gruppen har tatt bilde av skrujern, fastnøkkler og sag som ble funnet på verkstedet.
+ Eksempelbilder:
 
-For å kunne trene modellen må vi lage masker (labels) som forteller modellen hvor objektet vi ønsker å gjenkjenne er i bildet.
-Masken ble lagd lagret i .png format med der bakgrunnen er gjennomsiktig og modellen er farget helt sort.
+<img src="./data/foreground_segmentation_images/skrujern_image_01.jpg" width="400" height="300">
 
+<img src="./data/foreground_segmentation_images/wrench_image_01.png" width="185" height="400">
+
+## 2. Lag masker (labels)
 Det er viktig at bildet og masken matcher dvs. at masken dekker over objektet når den legges over bildet. De må derfor ha samme oppløsning og være rotert i samme rettning.
 Masken ble lagd med GIMP som er et bilderedigeringsprogram. Objektet ble merkert med lassoverktøyet og klippet ut. Det utklippede objektet ble limt inn i nytt lag og farget sort. Orginal bildet ble lagret som .jpg og masken som .png.
 
-For å trene modellen ble det tatt utgangspunkt i jupyter notbooken "foreground_segmentation" som vi så på under web undervisningen. Notbooken ble modifisert slik slik at den kunne trenes med bildene vi hadde tatt. Etter modellen er trent testes den mot alle testbildene i mappen.
+<img src="./data/foreground_segmentation_images/skrujern_image_01.jpg" width="400" height="300">
+<img src="./data/foreground_segmentation_labels/skrujern_label_01.png" width="400" height="300">
+
+
+## 3. Ekstraher features med DinoV3 & 4. Tren logistisk regresjon
+For å ekstahere features fra bildene og lage en logistisk regresjon brukes jupyter notebooken **Train.ipynb** 
+
+## 5. Test modellen
