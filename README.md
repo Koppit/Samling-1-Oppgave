@@ -49,4 +49,6 @@ Masken ble lagd med GIMP som er et bilderedigeringsprogram. Objektet ble merkert
 ## 3. Ekstraher features med DinoV3 & 4. Tren logistisk regresjon
 For å ekstahere features fra bildene og lage en logistisk regresjon brukes jupyter notebooken **Train.ipynb** 
 
+
+
 ## 5. Test modellen
